@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div>
+    <router-outlet></router-outlet>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<br>
+<div>
+    <h1
+    [style.font-size.em]="mivariable.nombreLista.length > 0 ? 3 : 1"
+    [style.color]="mivariable.nombreLista.length > 0 ? 'green' : 'red'">Componente app.component.html</h1>
+    <p [class.invisible]="mivariable.nombreLista.length == 0">
+        Escribiendo <strong>{{mivariable.nombreLista}}</strong></p>
+</div>
+
+<div class="w3-light-grey">
+    <div class="[ngClass]=validando(mivariable.nombreLista)"  style="height:24px;width:25%">
+        <h4>
+            <span [ngClass]="validando(mivariable.nombreLista)">{{mivariable.nombreLista}}</span>
+        </h4>
+    </div>
+  </div><br>
+<app-saludar #mivariable [nombre]="name"(saludar)="onSaludar($event)"></app-saludar>

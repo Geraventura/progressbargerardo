@@ -1,0 +1,21 @@
+<h1>saludar.component.html</h1>
+
+<div [ngSwitch]="nombres.length">
+    <div>
+        <input type="text"[(ngModel)]="nombreLista">
+        <br>
+        <button (click)="onButtonClick()">Añade nombre</button>
+        <br>
+    </div>
+    
+    <div *ngSwitchCase="1"> 
+        <p>Caso Uno</p>
+    </div>
+    <div *ngSwitchCase="3"> 
+        <p>Caso Tres</p>
+    </div>
+</div>
+<p *ngFor="let item of nombres; index as i">
+    {{i}}.- Hola. {{item}}
+</p>
+<br>

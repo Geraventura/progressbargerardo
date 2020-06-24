@@ -1,0 +1,15 @@
+p{
+    font-size: 1.5em;
+}
+.weak{
+    color: red;
+    background-color: red;
+}
+.medium{
+    color: yellow;
+    background-color: yellow;
+}
+.strong{
+    color: green;
+    background-color: green;
+}
